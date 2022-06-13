@@ -1,38 +1,83 @@
 .App {
-  text-align: center;
+    background-image: url('./images/bg.png');
+    background-size: cover;
+    background-repeat:no-repeat;
+    height:100vh;
+    margin:0;
+    padding:0;
+   
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container-t {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    overflow:hidden;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-container-t {
+    height: 80vh;
+    width: 488px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 3px 10px #00000029;
+    border-radius: 16px;
+    overflow:scroll;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    .main-container-t::-webkit-scrollbar {
+        display: none;
+    }
+.selected {
+    border: 2px solid #FE5454;
 }
-
-.App-link {
-  color: #61dafb;
+.selected-inner {
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+    cursor: pointer;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.unselcted-inner {
+    width: 48px;
+    height: 48px;
+    margin: 16px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+    /*.unselcted-inner:hover {
+        transform: scale(1.1);
+    }*/
+.selected-outer {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+.unselected-outer {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+    .unselected-outer:hover {
+        transform: scale(1.1);
+    }
+#demo-simple-select-filled-label {
+    color: red;
+}
+.no-scroll::-webkit-scrollbar {
+    display: none;
+}
+.for-select{
+    border:none;
+    background-color:grey;
+}
+svg{
+    z-index:1;
+}
+#demo-simple-select-filled {
+    border: none;
+    background-color: #ededed;
+    outline:none;
+}
+#modal-select {
+    border: none;
+    background-color: #ededed;
+    outline: none;
 }
